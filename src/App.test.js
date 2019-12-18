@@ -8,7 +8,7 @@ import App from './App';
 //   expect(linkElement).toBeInTheDocument();
 // });
 
-test('renders todo list component', () => {
+test('renders hello world in todo list component', () => {
   const { getByText } = render(<App />);
   const list = getByText(/hello/i);
   expect(list).toBeInTheDocument();

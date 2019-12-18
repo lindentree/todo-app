@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const ToDoList = () => {
-  return <div> Hello World </div>
+  let [todo, setToDo] = useState([]);
+
+  return (
+
+    <div>
+      <div>Hello World</div>
+      <input
+        type="text"
+        placeholder="Add a todo"
+        value={todo}
+        onChange={e => setToDo(e.target.value)}
+      />
+    </div>
+  )
 }
 
 export default ToDoList;
