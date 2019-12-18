@@ -4,15 +4,15 @@ import '@testing-library/jest-dom/extend-expect';
 import ToDoList from './ToDoList';
 
 it("should be able to add todos", () => {
-  const { container } = render(<ToDoList />);
+  const { getByPlaceholderText, getByText } = render(<ToDoList />);
   const input = getByPlaceholderText(/add a todo/i);
-  const todo = "Finish assessment";
+  const sampletodo = "Finish assessment";
 
-  getByText("No to-dos!");
+  getByText("You currently have no todos.");
 
-  fireEvent.change(input, { target: { value: todo } });
+  fireEvent.change(input, { target: { value: sampletodo } });
   fireEvent.keyDown(input, { key: "Enter" });
 
-  getByText(todo);
+  getByText(sampletodo);
   expect(input.value).toBe("");
 });

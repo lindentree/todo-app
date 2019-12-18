@@ -10,6 +10,6 @@ import App from './App';
 
 test('renders hello world in todo list component', () => {
   const { getByText } = render(<App />);
-  const list = getByText(/hello/i);
+  const list = getByText(/my todo list/i);
   expect(list).toBeInTheDocument();
 });
