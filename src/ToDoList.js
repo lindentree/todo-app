@@ -19,11 +19,12 @@ const ToDoList = () => {
     <div>
       <h2>My Todo List</h2>
       <ol className="numbered">
-        { todos.length > 0 ?
-          todos.map(((todo)=>{
-            return <li key={uuidv1()}>{todo.task}</li>
-          }))
-        : <p>You currently have no todos.</p>
+        { 
+          todos.length > 0 
+          ? todos.map(((todo)=>{
+              return <li key={uuidv1()}> {todo.task} </li>
+            }))
+          : <p>You currently have no todos.</p>
         }
       </ol>
    

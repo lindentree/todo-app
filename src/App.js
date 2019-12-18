@@ -2,7 +2,7 @@ import React from 'react';
 import ToDoList from './ToDoList';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <ToDoList />
