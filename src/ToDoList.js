@@ -4,8 +4,8 @@ const uuidv1 = require('uuid/v1');
 
 const ToDoList = () => {
 
-  let [input, setInput] = useState("");
-  let [todos, setToDos] = useState([]);
+  const [input, setInput] = useState("");
+  const [todos, setToDos] = useState([]);
 
   const addTodo = e => {
     if (e.key === "Enter" && input.length > 0) {

@@ -1,8 +1,10 @@
 An incomplete todo list app built in the TDD paradigm with functional components and React Hooks.
+Currently allows the user to add todos in ascending numerical order
 
 Todos:
 
-1. Add ability to delete todos or mark them complete
+1. Add ability to delete todos 
+2. Add ability to mark todos complete
 2. Persist todos in localStorage
 
 ***
