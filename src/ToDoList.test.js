@@ -18,7 +18,7 @@ it("should be able to add todos", () => {
 });
 
 test("removes a to-do", () => {
-  const todos = [{ task: "look up Groovy", completed: false }, { task: "Buy groceries", completed: true }, { name: "Walk the dog", completed: false }]
+  const todos = [{ task: "look up Groovy", completed: false }, { task: "Buy groceries", completed: true }, { task: "Walk the dog", completed: false }]
   const { getByTestId, queryByText } = render(<ToDoList todos={todos} />)
 
   const removeButton = within(getByTestId("todo-1")).getByText(/remove/i)

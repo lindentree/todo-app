@@ -28,14 +28,13 @@ const ToDoList = () => {
         }
       </ol>
    
-        <input
-          type="text"
-          placeholder="Add a todo"
-          onChange={e => setInput(e.target.value)}
-          onKeyDown={addTodo}
-          value={input}
-        />
-     
+      <input
+        type="text"
+        placeholder="Add a todo"
+        onChange={e => setInput(e.target.value)}
+        onKeyDown={addTodo}
+        value={input}
+      />
     </div>
   )
 }
