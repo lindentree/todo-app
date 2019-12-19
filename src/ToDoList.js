@@ -14,6 +14,10 @@ const ToDoList = () => {
     }
   };
 
+  const removeTodo = index => {
+    setToDos(list => list.filter((todo, i) => i !== index));
+  };
+
   return (
 
     <div>
@@ -21,8 +25,17 @@ const ToDoList = () => {
       <ol className="numbered">
         { 
           todos.length > 0 
-          ? todos.map(((todo)=>{
-              return <li key={uuidv1()}> {todo.task} </li>
+          ? todos.map(((todo, i)=>{
+              return (
+                     <div>
+                     <li key={uuidv1()}> 
+                       {todo.task} 
+                     </li>
+                     <button className="todo-delete" onClick={() => removeTodo(i)}>
+                       Remove
+                     </button>
+                     </div>
+                     )
             }))
           : <p>You currently have no todos.</p>
         }
